@@ -11,7 +11,7 @@ A Machine Learning web application that predicts the **estimated selling price o
 
 ## 🌐 Live Demo
 
-🔗 **Streamlit App:** *https://house-price-prediction-ames-housing-kenuylyeyvmdvtwzymzbg3.streamlit.app/*
+🚀 **Try the App:** https://house-price-prediction-ames-housing-kenuylyeyvmdvtwzymzbg3.streamlit.app/
 
 ## 📂 GitHub Repository
 
@@ -21,19 +21,21 @@ A Machine Learning web application that predicts the **estimated selling price o
 
 # 📖 Project Overview
 
-House prices are influenced by several factors such as lot size, overall quality, living area, garage capacity, basement area, and many more.
+This project predicts the estimated selling price of residential properties using a **Random Forest Regressor** trained on the **Ames Housing Dataset**.
 
-This project aims to estimate the selling price of a house based on **21 important numerical features** extracted from the Ames Housing Dataset.
+The workflow covers the complete machine learning pipeline—from data preprocessing and exploratory data analysis to model training, evaluation, deployment, and building an interactive web application with Streamlit.
 
-The project follows a complete Machine Learning workflow, including:
+---
 
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Feature Selection
-- Model Training
-- Model Evaluation
-- Streamlit Web Application
-- Deployment on Streamlit Cloud
+# ✨ Key Features
+
+- 🏠 Predict house prices instantly
+- 🤖 Random Forest Regression model
+- 📊 Interactive Streamlit interface
+- 📈 Feature selection using correlation analysis
+- 🧹 Data preprocessing and cleaning
+- 🚀 Deployed on Streamlit Community Cloud
+- 💻 End-to-end Machine Learning workflow
 
 ---
 
@@ -41,20 +43,21 @@ The project follows a complete Machine Learning workflow, including:
 
 **Dataset:** Ames Housing Dataset
 
-The dataset contains detailed information about residential properties including:
+The dataset contains detailed information about residential properties, including:
 
+- Lot Frontage
 - Lot Area
 - Overall Quality
 - Year Built
-- Basement Area
+- Basement Features
 - Living Area
 - Garage Information
 - Bathrooms
 - Outdoor Features
 
-Target Variable:
+**Target Variable**
 
-- **SalePrice**
+- SalePrice
 
 ---
 
@@ -64,13 +67,13 @@ Target Variable:
 
 - Random Forest Regressor
 
-The model was selected because it effectively captures non-linear relationships and provides strong performance on structured tabular data.
+Random Forest was chosen because it can effectively capture complex, non-linear relationships in structured tabular data while providing strong predictive performance.
 
 ---
 
 # 📈 Features Used
 
-The model uses the following **21 numerical features**:
+The model uses **21 numerical features**:
 
 - Lot Frontage
 - Lot Area
@@ -93,17 +96,6 @@ The model uses the following **21 numerical features**:
 - Garage Area
 - Wood Deck SF
 - Open Porch SF
-
----
-
-# 🚀 Features of the Application
-
-- Predict house prices instantly
-- Clean and user-friendly Streamlit interface
-- Interactive input fields
-- Fast prediction using a trained Random Forest model
-- Responsive layout
-- Easy to use
 
 ---
 
@@ -136,7 +128,7 @@ House-Price-Prediction-Ames-Housing/
 
 ---
 
-# ⚙️ Installation
+# 🚀 Installation
 
 Clone the repository
 
@@ -144,7 +136,7 @@ Clone the repository
 git clone https://github.com/Subhu0110/House-Price-Prediction-Ames-Housing.git
 ```
 
-Move into the project directory
+Navigate to the project directory
 
 ```bash
 cd House-Price-Prediction-Ames-Housing
@@ -156,7 +148,7 @@ Install the dependencies
 pip install -r requirements.txt
 ```
 
-Run the Streamlit application
+Run the application
 
 ```bash
 streamlit run app.py
@@ -166,12 +158,12 @@ streamlit run app.py
 
 # 🔮 Future Improvements
 
-- Hyperparameter tuning using RandomizedSearchCV/GridSearchCV
-- Feature engineering
-- Improved UI with custom CSS
-- Support for categorical features
+- Hyperparameter tuning using RandomizedSearchCV
 - Model comparison with XGBoost and Gradient Boosting
-- Explainable AI using SHAP values
+- Feature engineering
+- Explainable AI using SHAP
+- Enhanced UI with custom styling
+- Support for categorical features
 
 ---
 
@@ -187,8 +179,8 @@ GitHub:
 https://github.com/Subhu0110
 
 LinkedIn:
-https://www.linkedin.com/in/subhansh-yadav-081116365/
+*(Add your LinkedIn profile URL here)*
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star!
+## ⭐ If you like this project, consider giving it a star!
