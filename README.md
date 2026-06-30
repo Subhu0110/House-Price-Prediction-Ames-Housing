@@ -1,182 +1,194 @@
-# 🏠 House Price Prediction using Ames Housing Dataset
+# 🏠 House Price Prediction using Random Forest Regressor
 
-## 📌 Project Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?style=for-the-badge&logo=streamlit)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-This project aims to predict house prices using the Ames Housing Dataset by applying multiple Machine Learning regression algorithms and comparing their performance.
-
-The project covers the complete Machine Learning workflow:
-
-✔ Data Cleaning
-✔ Missing Value Handling
-✔ Feature Selection
-✔ Model Building
-✔ Hyperparameter Tuning
-✔ Model Evaluation
-✔ Model Comparison
+A Machine Learning web application that predicts the **estimated selling price of a house** using a **Random Forest Regressor** trained on the **Ames Housing Dataset**.
 
 ---
 
-## 🎯 Objective
+## 🌐 Live Demo
 
-Predict the **SalePrice** of houses based on various property features and identify the best-performing regression model.
+🔗 **Streamlit App:** *https://house-price-prediction-ames-housing-kenuylyeyvmdvtwzymzbg3.streamlit.app/*
+
+## 📂 GitHub Repository
+
+🔗 https://github.com/Subhu0110/House-Price-Prediction-Ames-Housing
 
 ---
 
-## 📊 Dataset Information
+# 📖 Project Overview
+
+House prices are influenced by several factors such as lot size, overall quality, living area, garage capacity, basement area, and many more.
+
+This project aims to estimate the selling price of a house based on **21 important numerical features** extracted from the Ames Housing Dataset.
+
+The project follows a complete Machine Learning workflow, including:
+
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Selection
+- Model Training
+- Model Evaluation
+- Streamlit Web Application
+- Deployment on Streamlit Cloud
+
+---
+
+# 📊 Dataset
 
 **Dataset:** Ames Housing Dataset
 
-**Target Variable:** `SalePrice`
+The dataset contains detailed information about residential properties including:
 
-The dataset contains information about:
+- Lot Area
+- Overall Quality
+- Year Built
+- Basement Area
+- Living Area
+- Garage Information
+- Bathrooms
+- Outdoor Features
 
-* Property Size
-* Overall Quality
-* Year Built
-* Garage Features
-* Basement Features
-* Lot Area
-* Living Area
-* And many other housing attributes
+Target Variable:
 
----
-
-## ⚙️ Data Preprocessing
-
-### 🔹 Missing Value Handling
-
-* Numerical Features → Median Imputation
-* Categorical Features → Mode Imputation
-
-### 🔹 Feature Selection
-
-Correlation analysis was performed to select features having meaningful relationships with the target variable.
-
-### 🔹 Train-Test Split
-
-* Training Data: 80%
-* Testing Data: 20%
+- **SalePrice**
 
 ---
 
-## 🤖 Models Implemented
+# 🤖 Machine Learning Model
 
-### 1️⃣ Linear Regression
+**Algorithm Used**
 
-A baseline model used to understand the linear relationship between features and house prices.
+- Random Forest Regressor
 
-**R² Score:** 0.80
-
----
-
-### 2️⃣ Decision Tree Regressor
-
-Captures non-linear relationships by recursively splitting the dataset.
-
-**R² Score:** 0.8517
+The model was selected because it effectively captures non-linear relationships and provides strong performance on structured tabular data.
 
 ---
 
-### 3️⃣ DT Best (RandomizedSearchCV)
+# 📈 Features Used
 
-Hyperparameter tuning was performed using RandomizedSearchCV.
+The model uses the following **21 numerical features**:
 
-**Best Parameters Found:**
-
-* max_depth = 9
-* min_samples_leaf = 9
-* min_samples_split = 8
-* criterion = squared_error
-
-**R² Score:** 0.8242
-
----
-
-### 4️⃣ Random Forest Regressor 🏆
-
-An ensemble learning technique that combines multiple decision trees.
-
-**R² Score:** 0.9073
-
----
-
-## 📈 Model Performance Comparison
-
-| Model                        | R² Score   |
-| ---------------------------- | ---------- |
-| Linear Regression            | 0.8000     |
-| Decision Tree Regressor      | 0.8517     |
-| DT Best (RandomizedSearchCV) | 0.8242     |
-| Random Forest Regressor      | **0.9073** |
-
-🏆 **Best Model: Random Forest Regressor**
+- Lot Frontage
+- Lot Area
+- Overall Qual
+- Year Built
+- Year Remod/Add
+- Mas Vnr Area
+- BsmtFin SF 1
+- Total Bsmt SF
+- 1st Flr SF
+- 2nd Flr SF
+- Gr Liv Area
+- Bsmt Full Bath
+- Full Bath
+- Half Bath
+- TotRms AbvGrd
+- Fireplaces
+- Garage Yr Blt
+- Garage Cars
+- Garage Area
+- Wood Deck SF
+- Open Porch SF
 
 ---
 
-## 📉 Evaluation Metrics Used
+# 🚀 Features of the Application
 
-* R² Score
-* MAE (Mean Absolute Error)
-* MSE (Mean Squared Error)
-* RMSE (Root Mean Squared Error)
-
----
-
-## 🧠 Key Learnings
-
-### ✅ Data Leakage Matters
-
-Initially, feature scaling was applied before train-test splitting, causing data leakage.
-
-After fixing the issue, the model evaluation became more reliable.
-
-### ✅ Tree-Based Models Do Not Need Scaling
-
-Decision Trees and Random Forests performed effectively without feature scaling.
-
-### ✅ Hyperparameter Tuning Is Not Guaranteed To Improve Results
-
-Although RandomizedSearchCV found optimized parameters, the tuned model performed worse than the default Decision Tree on the test set.
-
-### ✅ Ensemble Models Perform Better
-
-Random Forest significantly outperformed both Linear Regression and a single Decision Tree.
+- Predict house prices instantly
+- Clean and user-friendly Streamlit interface
+- Interactive input fields
+- Fast prediction using a trained Random Forest model
+- Responsive layout
+- Easy to use
 
 ---
 
-## 🛠️ Technologies Used
+# 🛠 Tech Stack
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-Learn
-* SciPy
-* Jupyter Notebook
-
----
-
-## 🚀 Future Improvements
-
-* Gradient Boosting Regressor
-* XGBoost Regressor
-* Feature Engineering
-* Cross Validation
-* Model Deployment using Flask/Streamlit
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Streamlit
+- Joblib
+- Git
+- GitHub
 
 ---
 
-## 👨‍💻 Author
+# 📁 Project Structure
+
+```text
+House-Price-Prediction-Ames-Housing/
+│
+├── app.py
+├── house_price_model.pkl
+├── House_predictor.ipynb
+├── README.md
+├── requirements.txt
+├── AmesHousing.csv
+└── images/
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Subhu0110/House-Price-Prediction-Ames-Housing.git
+```
+
+Move into the project directory
+
+```bash
+cd House-Price-Prediction-Ames-Housing
+```
+
+Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 🔮 Future Improvements
+
+- Hyperparameter tuning using RandomizedSearchCV/GridSearchCV
+- Feature engineering
+- Improved UI with custom CSS
+- Support for categorical features
+- Model comparison with XGBoost and Gradient Boosting
+- Explainable AI using SHAP values
+
+---
+
+# 👨‍💻 Developer
 
 **Subhansh Yadav**
 
-Machine Learning Enthusiast | CSE (AI & ML)
+B.Tech CSE (AI & ML)
+
+Indian Institute of Information Technology (IIIT) Nagpur
+
+GitHub:
+https://github.com/Subhu0110
+
+LinkedIn:
+https://www.linkedin.com/in/subhansh-yadav-081116365/
 
 ---
 
-## ⭐ Project Status
-
-✅ Completed
-
-Final Best Model: **Random Forest Regressor (R² = 90.73%)**
+## ⭐ If you found this project useful, consider giving it a star!
